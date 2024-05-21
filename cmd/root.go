@@ -14,7 +14,7 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "email-validatorc-go",
+	Use:   "email-validator-go",
 	Short: "A CLI tool to validate emails",
 	Long: `Trying out how to build a CLI tool with go. 
 	This time we are building a email validator tool. 
