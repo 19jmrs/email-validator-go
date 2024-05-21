@@ -2,10 +2,11 @@ package cmd
 
 import (
 	"fmt"
+	"net/mail"
 
 	"github.com/spf13/cobra"
 
-	"strings"
+
 )
 
 
@@ -28,28 +29,21 @@ func init(){
 }
 
 func validateEmail(cmd *cobra.Command, args [] string){
-	valid := true
+	
 	email,_ := cmd.Flags().GetString("email")
+	_, error := mail.ParseAddress(email)
+	isValid := false
 
-
-	if(email == ""){
-		fmt.Println("No email provided, try again!")
-	}
-
-	trimmedEmail := strings.Trim(email, " ")
-
-	if(strings.HasSuffix(trimmedEmail,".") || strings.HasPrefix(trimmedEmail,".")){
-		valid = false 
-	}
-
-	if(strings.Contains(trimmedEmail,"<") || strings.Contains(trimmedEmail,">") || strings.Contains(trimmedEmail, "(") || strings.Contains(trimmedEmail,")")){
-		valid = false
-	}
-
-	if(valid){
-		fmt.Println("Valid Email")
+	if(error != nil){
+		fmt.Println(error)
 	} else{
-		fmt.Println("Invalid Email")
+		isValid = true
+	}
+
+	if(isValid){
+		fmt.Printf("valid email")
+	}else {
+		fmt.Printf("not valid email")
 	}
 
 }
