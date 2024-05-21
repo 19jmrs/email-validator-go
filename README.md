@@ -11,4 +11,4 @@ The initil idea was to build a simple email format validator but over also used 
 - [x] ~Email Format Validator~
 - [x] ~Password Generator~
 
-This can be considered a playground of mini projects to learn CLI Tools.
+This can be considered a playground of mini projects to learn CLI Tools. (Chosed a bad starting command 👌)
