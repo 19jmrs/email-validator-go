@@ -7,7 +7,7 @@ The initil idea was to build a simple email format validator but over also used 
 
 - [ ] Resize Image given image name (specific path)
 - [ ] Move file between paths given paths + filename
-- [ ] Move file between paths give filename
+- [ ] Move file between paths given filename
 - [x] ~Email Format Validator~
 - [x] ~Password Generator~
 
