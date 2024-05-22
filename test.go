@@ -20,13 +20,19 @@ func main(){
 		//display name anc check if it is a Directory
 		fmt.Println(file.Name(), file.IsDir())
 	}
-
+	
+	
+	fmt.Println("Input the file name to move")
+	var filename string
+	fmt.Scanln(&filename)
 	//move file from test to Folder directory
 
-	err = os.Rename("test/newname.txt", "test/Folder/newname.txt")
+	err = os.Rename("test/"+filename, "test/Folder/"+filename)
 
 	if err != nil {
 		fmt.Println(err)
 		return
+	} else {
+		fmt.Println("File Moved Successfully")
 	}
 }
