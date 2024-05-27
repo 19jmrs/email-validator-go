@@ -6,9 +6,13 @@ The initil idea was to build a simple email format validator but over also used 
 ## Things to try out
 
 - [ ] Resize Image given image name (specific path)
-- [ ] Move file between paths given paths + filename
-- [ ] Move file between paths given filename
+- [x] Move file between paths given paths + filename
+- [x] Move file between paths given filename
 - [x] ~Email Format Validator~
 - [x] ~Password Generator~
+
+Some of the things in these points are applied in the test.go file and not has a command.
+
+The image resize will be tested in a file called image.go
 
 This can be considered a playground of mini projects to learn CLI Tools. (Chosed a bad starting command 👌)
